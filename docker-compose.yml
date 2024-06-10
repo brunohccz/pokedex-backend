@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    command: [ "uvicorn", "src.app.fastapi.main:app", "--host", "0.0.0.0", "--port", "8000", "--timeout-keep-alive", "60" ]
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - POKEAPI_URL=https://pokeapi.co/api/v2
+    ports:
+      - "8000:8000"
+    depends_on:
+      - redis
+
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"

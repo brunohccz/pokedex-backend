@@ -1,0 +1,16 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Poetry
+poetry.lock
+
+# PyCharm
+.idea/
+
+# Cache
+.cache/
+
+# Environment
+.env
