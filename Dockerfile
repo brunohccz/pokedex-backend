@@ -4,10 +4,10 @@ WORKDIR /app
 
 COPY pyproject.toml poetry.lock /app/
 
-RUN pip install poetry && poetry install --no-root --no-dev
+RUN pip install poetry && poetry install
 
 COPY . /app
 
-EXPOSE 8001
+EXPOSE 8000
 
 CMD ["poetry", "run", "uvicorn", "src.app.fastapi.main:app", "--host", "0.0.0.0", "--port", "8000"]
