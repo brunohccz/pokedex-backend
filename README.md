@@ -1,3 +1,5 @@
+![tests](https://github.com/brunohccz/pokedex-backend/workflows/pytesting/badge.svg) &nbsp; ![code coverage](https://raw.githubusercontent.com/brunohccz/pokedex-backend/coverage-badge/coverage.svg?raw=true)
+
 # Pokedex API
 
 Este projeto é uma API que permite aos usuários buscar informações sobre Pokemons.
