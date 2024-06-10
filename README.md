@@ -16,7 +16,7 @@ Este projeto é uma API que permite aos usuários buscar informações sobre Pok
 
 ```bash
 git clone https://github.com/brunohccz/pokedex-backend.git
-cd pokedex-api
+cd pokedex-backend
 ```
 
 2. Instale as dependências do projeto:
@@ -28,12 +28,12 @@ poetry install
 
 ## Execução com Docker Compose
 
-Para executar a aplicação usando Docker Compose, você precisa ter o Docker e o Docker Compose instalados em seu sistema.
+Para executar a aplicação usando Docker Compose, você precisa ter o Docker instalado em seu sistema.
 
 Primeiro, construa e inicie os serviços definidos no arquivo `docker-compose.yml`:
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 A aplicação estará disponível em `http://localhost:8000`.
@@ -41,7 +41,7 @@ A aplicação estará disponível em `http://localhost:8000`.
 Para parar e remover os containers, redes e volumes definidos no arquivo `docker-compose.yml`, use o seguinte comando:
 
 ```bash
-docker-compose down
+docker compose down
 ```
 
 ## Testes
